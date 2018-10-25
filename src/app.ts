@@ -1,17 +1,27 @@
-import { Observable, Subject, ReplaySubject, from, of, range } from 'rxjs';
-import { TodoService } from './services/todo.service';
+// import * as bodyParser from 'body-parser';
 
+// import { Container } from 'inversify';
+// import { InversifyExpressServer } from 'inversify-express-utils';
 
-console.log('new TodoService()', new TodoService())
-var subject = new Subject();
-var subscription = subject.subscribe(
-    value => console.log(`My Value is ${value}`),
-    err => console.log(`Error message: ${err}`),
-    () => console.log('Completed!')
-)
+// // declare metadata by @controller annotation
+// import "./controllers/foo.controller";
+// import { FooService } from './services/foo.service';
 
-subject.next(55);
-subject.next(34);
-subject.next(34);
+// // set up container
+// let container = new Container();
 
-subject.complete();
+// // set up bindings
+// container.bind<FooService>('FooService').to(FooService);
+
+// // create server
+// let server = new InversifyExpressServer(container);
+// server.setConfig((app) => {
+//   // add body parser
+//   app.use(bodyParser.urlencoded({
+//     extended: true
+//   }));
+//   app.use(bodyParser.json());
+// });
+
+// let app = server.build();
+// app.listen(3000);
